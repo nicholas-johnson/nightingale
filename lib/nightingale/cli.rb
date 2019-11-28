@@ -6,7 +6,7 @@ module Nightingale
   # Renders a Counter object nicely in the CLI
   class CLI
     def initialize(file_path)
-      @file_path = file_path;
+      @file_path = file_path
       @log_parser = LogParser.new
     end
 
