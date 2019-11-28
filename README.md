@@ -16,11 +16,11 @@ The log_file here is quite short, but from experience I know these can reach man
 
 Again, this is probably too much given the size of the problem, but I've assumed this is a proxy for a larger problem so I've written it in a scalable way.
 
-- Input - receives a file_path. Exposes a method that receives a block. Lines are passed to the block one by one.
+- Logfile - receives a file_path. Exposes a method that receives a block. Lines are passed to the block one by one.
 - Parser - Receives an input and a counter. Parses the lines one by one and passes them to the counter.
 - Counter - keeps a running count.
-- Output - Optionally prints to the console.
-- Nightingale - exposes a parse method. Creates an Input, a Parser and a Counter, sets them running, and returns the Counter.
+- CLI - Optionally prints to the console.
+- Nightingale - exposes a parse method. Creates a Logfile, a Parser and a Counter, sets them running, and returns the Counter.
 
 ## Tests
 
