@@ -9,7 +9,9 @@ module Nightingale
     end
 
     def parse_file
-      @logfile.read_lines { |line| @counter.add(parse_path(line), parse_ip(line)) }
+      @logfile.read_lines do |line|
+        @counter.add(parse_path(line), parse_ip(line))
+      end
       @counter
     end
 
