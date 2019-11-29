@@ -10,15 +10,6 @@ module Nightingale
       @log_parser = LogParser.new
     end
 
-    def render_sorted_aggregate
-      counter = @log_parser.parse(@file_path)
-      rows = counter.to_a.map do |row|
-        path, count = row
-        path + '    ' + count.to_s
-      end
-      puts rows
-    end
-
     def render
       counter = @log_parser.parse(@file_path)
       rows = counter.to_a.map do |row|
@@ -30,7 +21,7 @@ module Nightingale
 
     def render_count
       counter = @log_parser.parse(@file_path)
-      rows = counter.to_a.map do |row|
+      rows = counter.sort_by { |_, v| v.uniq.count }.reverse.map do |row|
         path, ips = row
         "#{path}   #{ips.uniq.count} unique views"
       end
