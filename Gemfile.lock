@@ -7,13 +7,13 @@ GEM
   remote: https://rubygems.org/
   specs:
     minitest (5.13.0)
-    rake (10.5.0)
+    rake (13.0.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bundler (~> 2.0)
-  nightingale!
   minitest (~> 5.0)
-  rake (~> 10.0)
+  nightingale!
+  rake (~> 13.0)
